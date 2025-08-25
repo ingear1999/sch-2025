@@ -31,5 +31,5 @@
 실행: 프로젝트> src >  main > java > SpringbootAppliaction 클라스의 main 매소드 실행: 녹색 버튼
 
 ##7. 스프링 구조: mvc 패턴
-<img src="image/mvc.png" width="600">
+<img src="images/mvc.png" width="600">
 
