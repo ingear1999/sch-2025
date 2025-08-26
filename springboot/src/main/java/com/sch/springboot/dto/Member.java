@@ -1,4 +1,4 @@
-package dto;
+package com.sch.springboot.dto;
 
 public class Member {
     private String name;

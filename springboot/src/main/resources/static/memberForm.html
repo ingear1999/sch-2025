@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1> Member Form</h1>
-    <form action="/member" method ="get">
+    <form action="/member-api" method ="post">
         <ul>
             <li>
                 <label> Name </label>
@@ -21,6 +21,13 @@
                 <label> Address </label>
                 <input type="text" name ="address">
             </li>
+
+            <li>
+                <label> Subject </label>
+                <input type="text" name ="subject">
+            </li>
+
+
             <li>
                 <button type="submit"> send</button>
                 <button type="reset"> cancle</button>

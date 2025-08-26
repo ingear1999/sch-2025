@@ -1,13 +1,29 @@
 package com.sch.springboot.controller;
 
-import dto.Member;
+import com.sch.springboot.dto.Member;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class memberController {
+    @ResponseBody
+    @PostMapping("/member-api")
+    public  Member memberApi(@ModelAttribute Member member ){
+
+        return member;//Rest API
+
+    }
+
+
+    @PostMapping("/member")
+    public String member(@ModelAttribute Member member,Model model ){
+        System.out.println("post!!");
+        model.addAttribute("member",member);
+        return "member";
+
+    }
+
     @GetMapping("/member")
     public String member(@RequestParam ("name") String name  ,
                          @RequestParam ("age") int age,
