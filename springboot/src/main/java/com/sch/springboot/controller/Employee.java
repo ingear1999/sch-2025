@@ -6,6 +6,16 @@ public class Employee
     private String name;
     private String department;
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    private String address;
+
 
     public String getDepartment() {
         return department;

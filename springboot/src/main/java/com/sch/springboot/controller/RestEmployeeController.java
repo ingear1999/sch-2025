@@ -7,28 +7,31 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+@RestController
+@RequestMapping("/api")
+@CrossOrigin("origin = ")
 public class RestEmployeeController {
 
     EmployeeService employeeService;
-    //생성자를 이용한 loose 커플링
+
+    //생성자를 이용한 Loose 커플링 DI
     @Autowired
     public RestEmployeeController(EmployeeService employeeService) {
-        this.employeeService= employeeService;
+        this.employeeService = employeeService;
+    }
 
+    //React --> 사원등록
+    @PostMapping("/employees/register")
+    public String employeeRegister(@RequestBody Employee employee) {
+        return employeeService.register(employee);
+    }
+
+    //React --> 사원리스트
+    @GetMapping("/employees")
+    public List<Employee> employees () {
+        return employeeService.findAll();
     }
 
 
-    @PostMapping("/register")
-    public String register(Employee employee){
 
-        return employeeService.register(employee);// success or fail
-    }
-
-    @GetMapping("/list")
-    public String list(Model model){
-        List<Employee> list=employeeService.findAll();
-        model.addAttribute("list",list);
-        return "employeelist";
-    }
 }
