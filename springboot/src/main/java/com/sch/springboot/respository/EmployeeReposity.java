@@ -1,6 +1,7 @@
-package com.sch.springboot.controller;
+package com.sch.springboot.respository;
 
 
+import com.sch.springboot.dto.Employee;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
