@@ -1,13 +1,11 @@
 package com.sch.springboot.dto;
 
 
-import com.sch.springboot.respository.EmployeeReposity;
-import com.sch.springboot.respository.JdbcTemplateEmployeeRepository;
-import com.sch.springboot.respository.JpaEmployeeRepository;
+import com.sch.springboot.repository.EmployeeReposity;
+import com.sch.springboot.repository.JpaEmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.swing.text.html.parser.Entity;
 import java.util.List;
 
 

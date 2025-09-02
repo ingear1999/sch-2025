@@ -17,7 +17,7 @@ public class JpaEmployeeRepository implements EmployeeRepositoryInterface {
 
     @Override
     public List<Employee> selectAll() {
-        return em.createQuery("select m from Employeee m", Employee.class)
+        return em.createQuery("select m from employeee m", Employee.class)
                 .getResultList();
     }
 
